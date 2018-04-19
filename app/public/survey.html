@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FranFinda Survey</title>
+    <!--skullicon-->
+    <link href="/skull.ico" rel="shortcut icon" type="image/x-icon">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center">
+                <span class="glyphicon glyphicon-king"></span> The FranFinda Survey!</h1>
+            <hr>
+            <h2 class="text-center">Use the sliders to select how you compare on the FranSpectrum!</h2>
+            <br>
+            <div class="survey-center">
+
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- initiates modal -->
+                <a href="/results">
+                <button type="button" id="myBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    <span class="glyphicon glyphicon-plus"></span> Who's your new Fran?! </button>
+                </a>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/tables">API Friends List</a> |
+                    <a href="/api/githubrepo">GitHub Repository</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
