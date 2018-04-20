@@ -7,3 +7,5 @@ var friends = [
         answers: [2,2,2,2,2,2,2,2,2,2]
     }
 ]
+
+module.exports = friends;
