@@ -5,16 +5,36 @@
     <meta charset="UTF-8">
     <title>FranFinda Survey</title>
     <!--skullicon-->
-    <link href="/skull.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../app/public/assets/images/skull.ico" rel="shortcut icon" type="image/x-icon">
     <!-- Latest compiled and minified CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-
 </head>
 
 <body>
+    <style>
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 23px;
+            height: 24px;
+            border: 0;
+            background: url("https://img.stockfresh.com/files/r/rastudio/x/37/7337146_63709637.jpg");
+            cursor: pointer;
+        }
 
+        .slider {
+            width: 23px;
+            height: 25px;
+            border: 0;
+            background: url("https://img.stockfresh.com/files/r/rastudio/x/37/7337146_63709637.jpg");
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
     <div class="container">
 
         <div class="jumbotron">
@@ -23,47 +43,564 @@
             <hr>
             <h2 class="text-center">Use the sliders to select how you compare on the FranSpectrum!</h2>
             <br>
-            <div class="survey-center">
+
+            <!-- Friend Details Form -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Complete Your Info to go to the Survey</h4>
+                </div>
+                <div class="panel-body">
+
+                    <form role="form">
+
+                        <div class="form-group">
+                            <label for="finder-name">Name</label>
+                            <input type="text" class="form-control" id="reserve-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="finder-number">Phone Number</label>
+                            <input type="text" class="form-control" id="reserve-name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="finder-photo">Link to Your Photo</label>
+                            <input type="text" class="form-control" id="reserve-name" required>
+                        </div>
+
+                        <!-- <a href="/finderInfo">
+                            <button type="submit" class="btn btn-primary friendInfo">Submit</button>
+                        </a>
+                    </form>
+                </div>
+            </div>
+            <!-- Survey Form -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">Position the sliders nearest to the gifs that you can relate to most!</h4>
+                            </div>
+                            <div class="panel-body">
+                                <form role="form">
+                                    <!-- question 1 -->
+                                    <div class="row">
+                                        <p>1. How you approach the UCSD Ext Full Stack Boot Camp...</p>
+                                        <div class="col-md-3" id="gif1a">
+                                            <img src="https://media.giphy.com/media/oubM1tKqnLW5G/giphy.gif" alt="Burt">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange1">
+                                                <p style="text-align: center;
+                                    vertical-align: middle;
+                                    line-height: 25px;">
+                                                    <span id="val1"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif1b">
+                                            <img src="https://media.giphy.com/media/LoGh1t5iGxFOE/giphy.gif" alt="Elmo">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 2 -->
+                                    <div class="row">
+                                        <p>2. When somebody does something irrational...</p>
+                                        <div class="col-md-3" id="gif2a">
+                                            <img src="https://media.giphy.com/media/2OJP8d5h1vrws/giphy.gif" alt="chill">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange2">
+                                                <p style="text-align: center;
+                                        vertical-align: middle;
+                                        line-height: 25px;">
+                                                    <span id="val2"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif2b">
+                                            <img src="https://media.giphy.com/media/ytqtshh4pVO4U/giphy.gif" alt="pissed">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 3 -->
+                                    <div class="row">
+                                        <p>3. How you represent the Stars and Stripes...</p>
+                                        <div class="col-md-3" id="gif3a">
+                                            <img src="https://media.giphy.com/media/BpP6mqWr8xn0c/giphy.gif" alt="anarchy">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange3">
+                                                <p style="text-align: center;
+                                            vertical-align: middle;
+                                            line-height: 25px;">
+                                                    <span id="val3"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif3b">
+                                            <img src="https://media.giphy.com/media/3oEjI1tgs8IfhqrMVa/giphy.gif" alt="proud">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 4 -->
+                                    <div class="row">
+                                        <p>4. How well you handle the "big fish" in your life...</p>
+                                        <div class="col-md-3" id="gif4a">
+                                            <img src="https://media.giphy.com/media/kTZBUjdRlZB3G/giphy.gif" alt="outta control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange4">
+                                                <p style="text-align: center;
+                                            vertical-align: middle;
+                                            line-height: 25px;">
+                                                    <span id="val4"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif4b">
+                                            <img src="https://media.giphy.com/media/G8hx3DSZEybNC/giphy.gif" alt="in control">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 5 -->
+                                    <div class="row">
+                                        <p>5. When it comes to problem solving...</p>
+                                        <div class="col-md-3" id="gif5a">
+                                            <img src="https://media.giphy.com/media/3owzW9t7Fgt7JiFHfW/giphy.gif" alt="lost">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange5">
+                                                <p style="text-align: center;
+                                            vertical-align: middle;
+                                            line-height: 25px;">
+                                                    <span id="val5"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif5b">
+                                            <img src="https://media.giphy.com/media/BmmfETghGOPrW/giphy.gif" alt="analytical">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 6 -->
+                                    <div class="row">
+                                        <p>6. How well do you perform under pressure...</p>
+                                        <div class="col-md-3" id="gif6a">
+                                            <img src="https://media.giphy.com/media/nE6edUlxtYrPG/giphy.gif" alt="fail">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange6">
+                                                <p style="text-align: center;
+                                                vertical-align: middle;
+                                                line-height: 25px;">
+                                                    <span id="val6"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif6b">
+                                            <img src="https://media.giphy.com/media/l49JYZR9Fcb00UgnK/giphy.gif" alt="score">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 7 -->
+                                    <div class="row">
+                                        <p>7. How you conduct yourself around old people...</p>
+                                        <br>
+                                        <div class="col-md-3" id="gif7a">
+                                            <img src="https://media.giphy.com/media/QNQgqJ403Vcoo/giphy.gif" alt="goofy">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange7">
+                                                <p style="text-align: center;
+                                                vertical-align: middle;
+                                                line-height: 25px;">
+                                                    <span id="val7"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif7b">
+                                            <img src="https://media.giphy.com/media/IdmfEtnMWPzOg/giphy.gif" alt="ignore">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 8 -->
+                                    <div class="row">
+                                        <p>8. How you respond when a deadline is approaching fast...</p>
+                                        <div class="col-md-3" id="gif8a">
+                                            <img src="https://media.giphy.com/media/14loV6Yilb8Rws/giphy.gif" alt="sit back">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange8">
+                                                <p style="text-align: center;
+                                                    vertical-align: middle;
+                                                    line-height: 25px;">
+                                                    <span id="val8"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif8b">
+                                            <img src="https://media.giphy.com/media/DkI5T0k6Cfti8/giphy.gif" alt="attack">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 9 -->
+                                    <div class="row">
+                                        <p>9. Are you more traditional or new school...</p>
+                                        <div class="col-md-3" id="gif9a">
+                                            <img src="https://media.giphy.com/media/rMszO5FZRLMyc/giphy.gif" alt="chill">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange9">
+                                                <p style="text-align: center;
+                                                    vertical-align: middle;
+                                                    line-height: 25px;">
+                                                    <span id="val9"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif9b">
+                                            <img src="https://media.giphy.com/media/ZBpRuKpeHSJwc/giphy.gif" alt="pissed">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
+
+                                    <!-- question 10 -->
+                                    <div class="row">
+                                        <p>10. When your fellow human is in distress...</p>
+                                        <div class="col-md-3" id="gif10a">
+                                            <img src="https://media.giphy.com/media/v10klSxkGUuRi/giphy.gif" alt="chill">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="slidecontainer">
+                                                <input type="range" min="1" max="5" value="3" class="slider" id="myRange10">
+                                                <p style="text-align: center;
+                                                        vertical-align: middle;
+                                                        line-height: 25px;">
+                                                    <span id="val10"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3" id="gif10b">
+                                            <img src="https://media.giphy.com/media/h9aQk54BbKoiA/giphy.gif" alt="pissed">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <hr>
 
 
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+
+                                    <a href="/results">
+                                        <button type="button" id="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                            <span class="glyphicon glyphicon-plus"></span> Who's your new Fran?! </button>
+                                    </a>
+                                </form>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- initiates modal -->
+
                             </div>
                         </div>
-                    </div>
+                        <footer class="footer">
+                            <div class="container">
+                                <p>
+                                    <a href="/tables">API Friends List</a> |
+                                    <a href="https://github.com/ctvogan88/FriendFinder">GitHub Repository</a>
+                                </p>
+                            </div>
+                        </footer>
                 </div>
-
-                <!-- initiates modal -->
-                <a href="/results">
-                <button type="button" id="myBtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    <span class="glyphicon glyphicon-plus"></span> Who's your new Fran?! </button>
-                </a>
-            </div>
-        </div>
-        <footer class="footer">
-            <div class="container">
-                <p>
-                    <a href="/api/tables">API Friends List</a> |
-                    <a href="/api/githubrepo">GitHub Repository</a>
-                </p>
-            </div>
-        </footer>
-    </div>
-
 </body>
 
 </html>
+
+<!-- THIS CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
+
+    // object array for negative gifs
+    var negGif = [{
+        "q1": "https://media.giphy.com/media/SMMJa2ONMQ5Ww/giphy.gif",
+        "q2": "",
+        "q3": "",
+        "q4": "",
+        "q5": "",
+        "q6": "",
+        "q7": "",
+        "q8": "",
+        "q9": "",
+        "q10": ""
+    }]
+
+    // object array for positive gifs
+    var posGif = [{
+        q1: "https://media.giphy.com/media/oubM1tKqnLW5G/giphy.gif",
+        q2: "",
+        q3: "",
+        q4: "",
+        q5: "",
+        q6: "",
+        q7: "",
+        q8: "",
+        q9: "",
+        q10: ""
+    }]
+
+    // SLIDER 1 -----------------------------------------------------------------
+    var slider1 = document.getElementById("myRange1");
+    var output1 = document.getElementById("val1");
+    output1.innerHTML = slider1.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider1.oninput = function () {
+        output1.innerHTML = this.value;
+        var score1 = this.value;
+    }
+
+    // SLIDER 2 -----------------------------------------------------------------
+    var slider2 = document.getElementById("myRange2");
+    var output2 = document.getElementById("val2");
+    output2.innerHTML = slider2.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider2.oninput = function () {
+        output2.innerHTML = this.value;
+        score = slider2.value;
+    }
+
+    // SLIDER 3 -----------------------------------------------------------------
+    var slider3 = document.getElementById("myRange3");
+    var output3 = document.getElementById("val3");
+    output3.innerHTML = slider3.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider3.oninput = function () {
+        output3.innerHTML = this.value;
+        score = slider3.value;
+    }
+
+    // SLIDER 4 -----------------------------------------------------------------
+    var slider4 = document.getElementById("myRange4");
+    var output4 = document.getElementById("val4");
+    output4.innerHTML = slider4.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider4.oninput = function () {
+        output4.innerHTML = this.value;
+        score = slider4.value;
+    }
+
+    // SLIDER 5 -----------------------------------------------------------------
+    var slider5 = document.getElementById("myRange5");
+    var output5 = document.getElementById("val5");
+    output5.innerHTML = slider5.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider5.oninput = function () {
+        output5.innerHTML = this.value;
+        score = slider5.value;
+    }
+
+    // SLIDER 6 -----------------------------------------------------------------
+    var slider6 = document.getElementById("myRange6");
+    var output6 = document.getElementById("val6");
+    output6.innerHTML = slider6.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider6.oninput = function () {
+        output6.innerHTML = this.value;
+        score = slider6.value;
+    }
+
+    // SLIDER 7 -----------------------------------------------------------------
+    var slider7 = document.getElementById("myRange7");
+    var output7 = document.getElementById("val7");
+    output7.innerHTML = slider7.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider7.oninput = function () {
+        output7.innerHTML = this.value;
+        score = slider7.value;
+    }
+
+    // SLIDER 8 -----------------------------------------------------------------
+    var slider8 = document.getElementById("myRange8");
+    var output8 = document.getElementById("val8");
+    output8.innerHTML = slider8.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider8.oninput = function () {
+        output8.innerHTML = this.value;
+        score = slider8.value;
+    }
+
+    // SLIDER 9 -----------------------------------------------------------------
+    var slider9 = document.getElementById("myRange9");
+    var output9 = document.getElementById("val9");
+    output9.innerHTML = slider9.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider9.oninput = function () {
+        output9.innerHTML = this.value;
+        score = slider9.value;
+    }
+
+    // SLIDER 10 -----------------------------------------------------------------
+    var slider10 = document.getElementById("myRange10");
+    var output10 = document.getElementById("val10");
+    output10.innerHTML = slider10.value;
+
+    // Display the default slider value
+    // set default difficulty level to 3
+    var score = 3;
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider10.oninput = function () {
+        output10.innerHTML = this.value;
+        score = slider10.value;
+    }
+
+
+
+    // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
+    // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
+    // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
+    // In this case the associated code "saves" the data to the table-data.js file or waitinglist-data.js file
+
+    $("#submit").on("click", function (event) {
+        event.preventDefault();
+
+        // Here we grab the form elements
+
+        // var newReservation = {
+        //   customerName: $("#reserve-name").val().trim(),
+        //   phoneNumber: $("#reserve-phone").val().trim(),
+        //   //customerEmail: $("#reserve-email").val().trim(),
+        //   //customerID: $("#reserve-unique-id").val().trim()
+        // };
+        var newFinder = {
+            name: $("#finder-name").val().trim(),
+            phone: $("#finder-number").val().trim(),
+            photo: $("#finder-photo").val().trim(),
+            q1: slider1.value,
+            q2: slider2.value,
+            q3: slider3.value,
+            q4: slider4.value,
+            q5: slider5.value,
+            q6: slider6.value,
+            q7: slider7.value,
+            q8: slider8.value,
+            q9: slider9.value,
+            q10: slider10.value,
+        };
+
+        console.log(newFinder);
+
+        // This line is the magic. It"s very similar to the standard ajax function we used.
+        // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
+        // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
+        // depending on if a tables is available or not.
+
+        $.post("/api/newFinder", newReservation,
+            function (data) {
+
+                // If a table is available... tell user they are booked.
+                if (data) {
+                    alert("Congratulations, you're in the system. Now take the survey!");
+                }
+
+                // If a table is available... tell user they on the waiting list.
+                else {
+                    alert("Sorry you are on the wait list");
+                }
+
+                // Clear the form when submitting
+                $("#reserve-name").val("");
+                //$("#reserve-phone").val("");
+                //$("#reserve-email").val("");
+                //$("#reserve-unique-id").val("");
+
+            });
+
+    });
+
+</script>
