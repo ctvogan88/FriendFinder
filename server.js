@@ -12,8 +12,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // set up routing js files
-var apiRoutes = require("./app/routing/apiRoutes.js");
-var htmlRoutes = require("./app/routing/htmlRoutes.js");
+require("./app/routing/apiRoutes.js")(app);
+//require("./app/routing/htmlRoutes.js")(app);
 //var friendList = require("./data/friends.js");
 
 // ROUTES -----------------------------------------------------------------
@@ -45,13 +45,13 @@ app.post("/api/newFinder", function(req, res) {
     // This works because of our body-parser middleware
     var newFinder = req.body;
   
-    console.log(newFinder);
+    //console.log(newFinder);
   
     // Using a RegEx Pattern to remove spaces from newCharacter
     // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newFinder.name = newFinder.name.replace(/\s+/g, "").toLowerCase();
+    //newFinder.name = newFinder.name.replace(/\s+/g, "").toLowerCase();
   
-    console.log(newFinder);
+    //console.log(newFinder);
     //console.log(reservations.length);
   
   /* if(reservations.length>4)   {

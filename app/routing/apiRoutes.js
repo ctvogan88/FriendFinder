@@ -1,3 +1,6 @@
+// set up dependencies
+var path = require('path');
+
 // ===============================================================================
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
@@ -22,6 +25,10 @@ module.exports = function (app) {
     // (ex. User fills out a reservation request... this data is then sent to the server...
     // Then the server saves the data to the tableData array)
     // ---------------------------------------------------------------------------
+
+    app.get("/skull", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/assets/images/skull.ico"));
+    });
 
     app.get("/api/tables", function (req, res) {
         res.json(tableData);
