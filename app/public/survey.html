@@ -34,6 +34,11 @@
         p {
             text-align: center;
         }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     </style>
     <div class="container">
 
@@ -55,17 +60,17 @@
 
                         <div class="form-group">
                             <label for="finder-name">Name</label>
-                            <input type="text" class="form-control" id="reserve-name" required>
+                            <input type="text" class="form-control" id="finder-name" required>
                         </div>
 
                         <div class="form-group">
                             <label for="finder-number">Phone Number</label>
-                            <input type="text" class="form-control" id="reserve-name" required>
+                            <input type="text" class="form-control" id="finder-number">
                         </div>
 
                         <div class="form-group">
                             <label for="finder-photo">Link to Your Photo</label>
-                            <input type="text" class="form-control" id="reserve-name" required>
+                            <input type="text" class="form-control" id="finder-photo" required>
                         </div>
 
                         <!-- <a href="/finderInfo">
@@ -83,11 +88,11 @@
                                 <form role="form">
                                     <!-- question 1 -->
                                     <div class="row">
-                                        <p>1. How you approach the UCSD Ext Full Stack Boot Camp...</p>
                                         <div class="col-md-3" id="gif1a">
                                             <img src="https://media.giphy.com/media/oubM1tKqnLW5G/giphy.gif" alt="Burt">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>1. How you approach the UCSD Ext Full Stack Boot Camp...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange1">
                                                 <p style="text-align: center;
@@ -106,11 +111,11 @@
 
                                     <!-- question 2 -->
                                     <div class="row">
-                                        <p>2. When somebody does something irrational...</p>
                                         <div class="col-md-3" id="gif2a">
                                             <img src="https://media.giphy.com/media/2OJP8d5h1vrws/giphy.gif" alt="chill">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>2. When somebody does something irrational...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange2">
                                                 <p style="text-align: center;
@@ -129,11 +134,11 @@
 
                                     <!-- question 3 -->
                                     <div class="row">
-                                        <p>3. How you represent the Stars and Stripes...</p>
                                         <div class="col-md-3" id="gif3a">
                                             <img src="https://media.giphy.com/media/BpP6mqWr8xn0c/giphy.gif" alt="anarchy">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>3. How you represent the Stars and Stripes...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange3">
                                                 <p style="text-align: center;
@@ -152,11 +157,11 @@
 
                                     <!-- question 4 -->
                                     <div class="row">
-                                        <p>4. How well you handle the "big fish" in your life...</p>
                                         <div class="col-md-3" id="gif4a">
                                             <img src="https://media.giphy.com/media/kTZBUjdRlZB3G/giphy.gif" alt="outta control">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>4. How well you handle the "big fish" in your life...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange4">
                                                 <p style="text-align: center;
@@ -175,11 +180,11 @@
 
                                     <!-- question 5 -->
                                     <div class="row">
-                                        <p>5. When it comes to problem solving...</p>
                                         <div class="col-md-3" id="gif5a">
                                             <img src="https://media.giphy.com/media/3owzW9t7Fgt7JiFHfW/giphy.gif" alt="lost">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>5. When it comes to problem solving...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange5">
                                                 <p style="text-align: center;
@@ -198,11 +203,11 @@
 
                                     <!-- question 6 -->
                                     <div class="row">
-                                        <p>6. How well do you perform under pressure...</p>
                                         <div class="col-md-3" id="gif6a">
                                             <img src="https://media.giphy.com/media/nE6edUlxtYrPG/giphy.gif" alt="fail">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>6. How well do you perform under pressure...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange6">
                                                 <p style="text-align: center;
@@ -221,12 +226,12 @@
 
                                     <!-- question 7 -->
                                     <div class="row">
-                                        <p>7. How you conduct yourself around old people...</p>
                                         <br>
                                         <div class="col-md-3" id="gif7a">
                                             <img src="https://media.giphy.com/media/QNQgqJ403Vcoo/giphy.gif" alt="goofy">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>7. How you conduct yourself around old people...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange7">
                                                 <p style="text-align: center;
@@ -245,11 +250,11 @@
 
                                     <!-- question 8 -->
                                     <div class="row">
-                                        <p>8. How you respond when a deadline is approaching fast...</p>
                                         <div class="col-md-3" id="gif8a">
                                             <img src="https://media.giphy.com/media/14loV6Yilb8Rws/giphy.gif" alt="sit back">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>8. How you respond when a deadline is approaching fast...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange8">
                                                 <p style="text-align: center;
@@ -268,11 +273,11 @@
 
                                     <!-- question 9 -->
                                     <div class="row">
-                                        <p>9. Are you more traditional or new school...</p>
                                         <div class="col-md-3" id="gif9a">
                                             <img src="https://media.giphy.com/media/rMszO5FZRLMyc/giphy.gif" alt="chill">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>9. Are you more traditional or new school...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange9">
                                                 <p style="text-align: center;
@@ -291,11 +296,11 @@
 
                                     <!-- question 10 -->
                                     <div class="row">
-                                        <p>10. When your fellow human is in distress...</p>
                                         <div class="col-md-3" id="gif10a">
                                             <img src="https://media.giphy.com/media/v10klSxkGUuRi/giphy.gif" alt="chill">
                                         </div>
                                         <div class="col-md-6">
+                                            <p>10. When your fellow human is in distress...</p>
                                             <div class="slidecontainer">
                                                 <input type="range" min="1" max="5" value="3" class="slider" id="myRange10">
                                                 <p style="text-align: center;
@@ -314,10 +319,12 @@
 
 
 
-                                    <a href="/results">
-                                        <button type="button" id="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                                            <span class="glyphicon glyphicon-plus"></span> Who's your new Fran?! </button>
-                                    </a>
+                                    <p>
+                                        <a href="/results">
+                                            <button type="button" id="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                                <span class="glyphicon glyphicon-plus"></span> Who's your new Fran?! </button>
+                                        </a>
+                                    </p>
                                 </form>
 
                                 <!-- Modal -->
@@ -539,8 +546,6 @@
         score = slider10.value;
     }
 
-
-
     // In this code below we create the Front-end JavaScript which "POSTS" our form data to our express server.
     // In essence, when the user hits submit, jQuery grabs all of the fields then sends a post request to our api
     // Our api recognizes the route (/api/tables)... and then runs the associated code (found in api-routes.js).
@@ -549,14 +554,7 @@
     $("#submit").on("click", function (event) {
         event.preventDefault();
 
-        // Here we grab the form elements
-
-        // var newReservation = {
-        //   customerName: $("#reserve-name").val().trim(),
-        //   phoneNumber: $("#reserve-phone").val().trim(),
-        //   //customerEmail: $("#reserve-email").val().trim(),
-        //   //customerID: $("#reserve-unique-id").val().trim()
-        // };
+        // get the form data
         var newFinder = {
             name: $("#finder-name").val().trim(),
             phone: $("#finder-number").val().trim(),
@@ -580,17 +578,17 @@
         // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
         // depending on if a tables is available or not.
 
-        $.post("/api/newFinder", newReservation,
+        $.post("/api/newFinder", newFinder,
             function (data) {
 
                 // If a table is available... tell user they are booked.
                 if (data) {
-                    alert("Congratulations, you're in the system. Now take the survey!");
+                    alert("Congratulations, you're in the system. Maybe you can get a friend!");
                 }
 
                 // If a table is available... tell user they on the waiting list.
                 else {
-                    alert("Sorry you are on the wait list");
+                    alert("Sorry no friends :(");
                 }
 
                 // Clear the form when submitting
