@@ -355,7 +355,7 @@
                         <footer class="footer">
                             <div class="container">
                                 <p>
-                                    <a href="/tables">API Friends List</a> |
+                                    <a href="/api/tables">API Friends List</a> |
                                     <a href="https://github.com/ctvogan88/FriendFinder">GitHub Repository</a>
                                 </p>
                             </div>
@@ -581,24 +581,21 @@
         $.post("/api/newFinder", newFinder,
             function (data) {
 
-                // If a table is available... tell user they are booked.
+                // if there's data, success alert
                 if (data) {
                     alert("Congratulations, you're in the system. Maybe you can get a friend!");
                 }
 
-                // If a table is available... tell user they on the waiting list.
+                // if there's no data, there's no friends
                 else {
                     alert("Sorry no friends :(");
                 }
 
                 // Clear the form when submitting
-                $("#reserve-name").val("");
-                //$("#reserve-phone").val("");
-                //$("#reserve-email").val("");
-                //$("#reserve-unique-id").val("");
-
+                $("#finder-name").val("");
+                $("#finder-number").val("");
+                $("#finder-photo").val("");
             });
-
     });
 
 </script>
