@@ -8,4 +8,8 @@ var friends = [
     }
 ]
 
+<<<<<<< HEAD
 module.exports = friends;
+=======
+module.exports = friends;
+>>>>>>> f407bd39e00ed846796389bf98ff78b6d340cb04
